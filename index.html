@@ -66,16 +66,16 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://binhuixie.github.io" target="_blank">Binhui Xie</a><sup>&#9835;</sup>,</span>
-              <span class="author-block">
-                <a href="https://shuangli.xyz" target="_blank">Shuang Li</a><sup>&#9835;</sup>,</span>
-              <span class="author-block">
-                <a href="https://github.com/WAAutomation" target="_blank">Qingju Guo</a><sup>&#9835;</sup>
+                <a href="https://binhuixie.github.io" target="_blank">Binhui Xie</a><sup>&#9835;</sup>,
               </span>
-              </br>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=3IgFTEkAAAAJ" target="_blank">Chi Harold
-                  Liu</a><sup>&#9835;</sup>,
+                <a href="https://shuangli.xyz" target="_blank">Shuang Li</a><sup>&#9835;</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://github.com/WAAutomation" target="_blank">Qingju Guo</a><sup>&#9835;</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=3IgFTEkAAAAJ" target="_blank">Chi Harold Liu</a><sup>&#9835;</sup>,
               </span>
               <a href="https://mmlab.siat.ac.cn/yuqiao/index.html" target="_blank">Xinjing Cheng</a><sup>&#9834;</sup>
               </span>
@@ -90,12 +90,12 @@
               <div class="publication-links">
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/xxx" target="_blank"
+                  <a href="https://binhuixie.github.io/annotator-web/" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
-                    <span>Paper</span>
+                    <span>Paper (coming)</span>
 
                     <!-- Github link -->
                     <span class="link-block">
@@ -104,7 +104,7 @@
                         <span class="icon">
                           <i class="fab fa-github"></i>
                         </span>
-                        <span>Code</span>
+                        <span>Code (coming)</span>
                       </a>
                       <!-- <a href="https://twitter.com"><img
                           src="https://img.icons8.com/color/48/000000/twitter.png" width="45" height="45"></a> -->
@@ -217,12 +217,12 @@
               real-to-real scenarios.
             </p>
 
-            <img src="static/images/exp_compare.png" alt="MY ALT TEXT" />
+            <!-- <img src="static/images/exp_compare.png" alt="MY ALT TEXT" />
             <p>
               Performance vs. annotated proportion on SemanticKITTI val of existing label-efficient LiDAR segmentation
               paradigms including domain adaptation, weakly- and semi-supervised learning. Annotator attains excellent
               balance between performance and annotation cost.
-            </p>
+            </p> -->
 
             <img src="static/images/exp_summary1.png" alt="MY ALT TEXT" />
             <p>
@@ -252,15 +252,16 @@
               Category frequencies on SemanticPOSS train of Annotator selected 5 voxel grids under AL, ASFDA, ADA scenarios, with the model trained on SynLiDAR-to-POSS (MinkNet).
             </p>
 
-            <img src="static/images/vis_seg_map.png" alt="MY ALT TEXT" />
-            <p>
-              Visualization of segmentation results for the task SynLiDAR-to-KITTI using MinkNet. Each row shows results of Ground-Truth, Target-Only, Source-Only, our Annotator under AL, ASFDA, and ADA scenarios one by one.
-            </p>
-
             <img src="static/images/exp_backbones.png" alt="MY ALT TEXT" />
             <p>
               Table 5: Per-class results on the SemanticPOSS val (range-view: SalsaNet and bev-view: PolarNet) under active learning setting using only 10 voxel budgets.
             </p>
+
+            <img src="static/images/vis_seg_map.png" alt="MY ALT TEXT" />
+            <p>
+              Visualization of segmentation results for the task SynLiDAR-to-KITTI using MinkNet. Each row shows results of Ground-Truth, Target-Only, Source-Only, our Annotator under AL, ASFDA, and ADA scenarios one by one.
+            </p>
+            
           </div>
         </div>
       </div>
@@ -273,51 +274,170 @@
     </h2>
     <div class="multi_column">
       <div class="has-text-centered">
+        <a  target="_blank">
+          <p> SynLiDAR-to-KITTI (AL)</p>
+        </a>
+      </div>
+      <div class="has-text-centered">
+        <a target="_blank">
+          <p> SynLiDAR-to-KITTI (ASFDA)</p>
+        </a>  
+      </div>
+      <div class="has-text-centered">
+        <a target="_blank">
+          <p> SynLiDAR-to-KITTI (ADA)</p>
+        </a>
+      </div>
+      <div class="has-text-centered">
         <a target="_blank">
           <p> SynLiDAR-to-POSS (AL)</p>
         </a>
       </div>
-
       <div class="has-text-centered">
         <a target="_blank">
           <p> SynLiDAR-to-POSS (ASFDA)</p>
         </a>
       </div>
-
       <div class="has-text-centered">
         <a target="_blank">
           <p> SynLiDAR-to-POSS (ADA)</p>
         </a>
       </div>
-
-
-      <div class="multi_column">
+    </div>
+    
+    <div class=" multi_column">
         <div>
           <div class="hvr-grow modality">
-            <atarget="_blank">
-              <img src="static/images/syn2poss_al.png" alt="point cloud" id="modality_image" />
-              </a>
+            <a target="_blank">
+            <img src="static/images/syn2kitti_al.png" alt="point cloud" id="modality_image"/>
+            </a>
           </div>
         </div>
-
-        <div>
+        <div >
           <div class="hvr-grow modality">
-            <atarget="_blank">
-              <img src="static/images/syn2poss_asfda.png" alt="point cloud" id="modality_image" />
-              </a>
+            <a target="_blank">
+              <img src="static/images/syn2kitti_asfda.png" alt="point cloud" id="modality_image"/>
+            </a>
           </div>
         </div>
-
-        <div>
+        <div >
           <div class="hvr-grow modality">
-            <atarget="_blank">
-              <img src="static/images/syn2poss_ada.png" alt="point cloud" id="modality_image" />
-              </a>
+            <a target="_blank">
+              <img src="static/images/syn2kitti_ada.png" alt="point cloud" id="modality_image"/>
+            </a>
           </div>
         </div>
-
-  </section>
-
+        <div >
+          <div class="hvr-grow modality">
+            <a target="_blank">
+              <img src="static/images/syn2poss_al.png" alt="point cloud" id="modality_image"/>
+            </a>
+          </div>
+        </div >
+        <div >
+          <div class="hvr-grow modality">
+            <a target="_blank">
+              <img src="static/images/syn2poss_asfda.png" alt="point cloud" id="modality_image"/>
+            </a>
+          </div>
+        </div>
+        <div >
+          <div class="modality">
+            <a target="_blank">
+              <img src="static/images/syn2poss_ada.png" alt="point cloud" id="modality_image"/>
+            </a>
+          </div>
+        </div>
+        
+    
+    </div>
+    
+    <div class="multi_column">
+      <div class="has-text-centered">
+        <a target="_blank">
+          <p> KITTI-to-nuScenes (AL)</p>
+        </a>
+      </div>
+    
+      <div class="has-text-centered">
+        <a target="_blank">
+          <p> KITTI-to-nuScenes (ASFDA)</p>
+        </a>
+      </div>
+    
+      <div class="has-text-centered">
+        <a target="_blank">
+          <p> KITTI-to-nuScenes (ADA)</p>
+        </a>
+      </div>
+      
+      <div class="has-text-centered">
+        <a target="_blank">
+          <p> nuScenes-to-KITTI (AL)</p>
+        </a>
+      </div>
+    
+      <div class="has-text-centered">
+        <a target="_blank">
+          <p> nuScenes-to-KITTI (ASFDA)</p>
+        </a>
+      </div>
+    
+      <div class="has-text-centered">
+        <a target="_blank">
+          <p> nuScenes-to-KITTI (ADA)</p>
+        </a>
+      </div>
+    </div>
+    
+    <div class="multi_column">
+      <div >
+        <div class="hvr-grow modality">
+          <a target="_blank">
+            <img src="static/images/kitti2nus_al.png" alt="point cloud" id="modality_image"/>
+          </a>
+        </div>
+      </div>
+      <div >
+        <div class="hvr-grow modality">
+          <a target="_blank">
+            <img src="static/images/kitti2nus_asfda.png" alt="point cloud" id="modality_image"/>
+          </a>
+        </div>
+      </div>
+      <div >
+        <div class="hvr-grow modality">
+          <a target="_blank">
+            <img src="static/images/kitti2nus_ada.png" alt="point cloud" id="modality_image"/>
+          </a>
+        </div>
+      </div>
+      <div >
+        <div class="hvr-grow modality">
+          <a target="_blank">
+            <img src="static/images/nus2kitti_al.png" alt="point cloud" id="modality_image"/>
+          </a>
+        </div>
+      </div>
+      
+      <div >
+        <div class="hvr-grow modality">
+          <a target="_blank">
+            <img src="static/images/nus2kitti_asfda.png" alt="point cloud" id="modality_image"/>
+          </a>
+        </div>
+      </div>
+    
+      <div >
+        <div class="modality">
+          <a target="_blank">
+            <img src="static/images/nus2kitti_ada.png" alt="point cloud" id="modality_image"/>
+          </a>
+        </div>
+      </div>
+    </div>
+    </section>
+    
 
   <!-- Paper poster -->
   <!--
