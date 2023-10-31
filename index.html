@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJDETMSJZZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-WJDETMSJZZ');
+  </script>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Annotator: A Generic Active Learning Baseline for LiDAR Semantic Segmentation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/bit_logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Annotator: A Generic Active Learning Baseline for LiDAR Semantic
+              Segmentation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://binhuixie.github.io" target="_blank">Binhui Xie</a><sup>&#9835;</sup>,</span>
+              <span class="author-block">
+                <a href="https://shuangli.xyz" target="_blank">Shuang Li</a><sup>&#9835;</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/WAAutomation" target="_blank">Qingju Guo</a><sup>&#9835;</sup>
+              </span>
+              </br>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=3IgFTEkAAAAJ" target="_blank">Chi Harold
+                  Liu</a><sup>&#9835;</sup>,
+              </span>
+              <a href="https://mmlab.siat.ac.cn/yuqiao/index.html" target="_blank">Xinjing Cheng</a><sup>&#9834;</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>&#9835;</sup>Beijing Institute of Technology, <sup>&#9834;</sup>Tsinghua
+                University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/xxx" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Paper</span>
+
+                    <!-- Github link -->
+                    <span class="link-block">
+                      <a href="https://github.com/BIT-DA/Annotator" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                      </a>
+                      <!-- <a href="https://twitter.com"><img
+                          src="https://img.icons8.com/color/48/000000/twitter.png" width="45" height="45"></a> -->
+                      <!-- <a href="https://www.youtube.com/"><img
+                          src="https://img.icons8.com/color/48/000000/youtube-play.png" width="45" height="45"></a> -->
+                    </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
+
+  <source src="static/videos/banner_video.mp4"
+  type="video/mp4">
+</video> -->
+
+
+  <!-- Teaser image-->
+  <section class="hero teaser square_teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser.png" alt="Teaser" />
+        <h2 class="subtitle has-text-centered">
+          Annotator: a voxel-centric active learning baseline that efficiently reduces the labeling cost of enormous
+          point clouds and effectively facilitates learning with a limited budget, which is generally applicable and
+          works for different network architectures, in distribution or out of distribution setting, and
+          simulation-to-real and real-to-real scenarios with consistent performance gains.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+
+  <!-- Paper abstract -->
+  <section class="section hero ">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Active learning, a label-efficient paradigm, empowers models to interactively query an oracle for labeling
+              new data. In the realm of LiDAR semantic segmentation, the challenges stem from the sheer volume of point
+              clouds, rendering annotation labor-intensive and cost-prohibitive. This paper presents Annotator, a
+              general and efficient active learning baseline, in which a voxel-centric online selection strategy is
+              tailored to efficiently probe and annotate the salient and exemplar voxel girds within each LiDAR scan,
+              even under distribution shift. Concretely, we first execute an in-depth analysis of several common
+              selection strategies such as Random, Entropy, Margin, and then develop voxel confusion degree (VCD) to
+              exploit the local topology relations and structures of point clouds. Annotator excels in diverse settings,
+              with a particular focus on active learning (AL), active source-free domain adaptation (ASFDA), and active
+              domain adaptation (ADA). It consistently delivers exceptional performance across LiDAR semantic
+              segmentation benchmarks, spanning both simulation-to-real and real-to-real scenarios. Surprisingly,
+              Annotator exhibits remarkable efficiency, requiring significantly fewer annotations, e.g., just labeling
+              five voxels per scan in the SynLiDAR to SemanticKITTI task. This results in impressive performance,
+              achieving 87.8% fully-supervised performance under AL, 88.5% under ASFDA, and 94.4% under ADA. We envision
+              that Annotator will offer a simple, general, and efficient solution for label-efficient 3D applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <!-- Video start -->
+  <!-- <div class="columns is-centered has-text-centered">
+    <HR align=center style="border:3 double #000000" width="80%" SIZE=5>
+  </div>
+
+
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column ">
+          <h2 class="title is-3">Video Presentation</h2>
+          <div class="center-div">
+            <iframe width="750px" height="415" src="https://www.youtube.com/embed/V8L8xbsTyls"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="columns is-centered has-text-centered">
+    <HR align=center style="border:3 double #000000" width="80%" SIZE=5>
+  </div> -->
+  <!-- Video end -->
+
+  <!-- Result -->
+  <!-- <section class="section hero is-light"> -->
+  <section class="hero section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h2 class="title is-3">Experiment</h2>
+          <div class="content has-text-justified">
+            <p>
+              We evaluate Annotator on several LiDAR semantic segmentation benchmarks, including simulation-to-real and
+              real-to-real scenarios.
+            </p>
+
+            <img src="static/images/exp_compare.png" alt="MY ALT TEXT" />
+            <p>
+              Performance vs. annotated proportion on SemanticKITTI val of existing label-efficient LiDAR segmentation
+              paradigms including domain adaptation, weakly- and semi-supervised learning. Annotator attains excellent
+              balance between performance and annotation cost.
+            </p>
+
+            <img src="static/images/exp_summary1.png" alt="MY ALT TEXT" />
+            <p>
+              Table 1: Quantitative summary of all baselines' performance based on MinkNet over various LiDAR semantic
+              segmentation benchmarks using only 5 voxel grids. Source-/Target-Only correspond to the model trained on
+              the annotated source/target dataset which are considered as lower/upper bound. Note that results are
+              reported following the order of AL/ASFDA/ADA in each cell.
+            </p>
+
+            <img src="static/images/exp_summary2.png" alt="MY ALT TEXT" />
+            <p>
+              Table 2: Quantitative summary of all baselines' performance based on SPVCNN over various LiDAR semantic segmentation benchmarks using only 5 voxel grids.
+            </p>
+
+            <img src="static/images/exp_perclass1.png" alt="MY ALT TEXT" />
+            <p>
+              Table 3: Per-class results on task of SynLiDAR-to-KITTI (MinkNet) using only 5 voxel budgets.
+            </p>
+
+            <img src="static/images/exp_perclass2.png" alt="MY ALT TEXT" />
+            <p>
+              Table 4: Per-class results on task of SynLiDAR-to-POSS (MinkNet) using only 5 voxel budgets.
+            </p>
+
+            <img src="static/images/vis_class_freq.png" alt="MY ALT TEXT" />
+            <p>
+              Category frequencies on SemanticPOSS train of Annotator selected 5 voxel grids under AL, ASFDA, ADA scenarios, with the model trained on SynLiDAR-to-POSS (MinkNet).
+            </p>
+
+            <img src="static/images/vis_seg_map.png" alt="MY ALT TEXT" />
+            <p>
+              Visualization of segmentation results for the task SynLiDAR-to-KITTI using MinkNet. Each row shows results of Ground-Truth, Target-Only, Source-Only, our Annotator under AL, ASFDA, and ADA scenarios one by one.
+            </p>
+
+            <img src="static/images/exp_backbones.png" alt="MY ALT TEXT" />
+            <p>
+              Table 5: Per-class results on the SemanticPOSS val (range-view: SalsaNet and bev-view: PolarNet) under active learning setting using only 10 voxel budgets.
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <section class="section">
+    <h2 class="title is-4 has-text-centered">
+      Results with varying budgets
+    </h2>
+    <div class="multi_column">
+      <div class="has-text-centered">
+        <a target="_blank">
+          <p> SynLiDAR-to-POSS (AL)</p>
+        </a>
+      </div>
+
+      <div class="has-text-centered">
+        <a target="_blank">
+          <p> SynLiDAR-to-POSS (ASFDA)</p>
+        </a>
+      </div>
+
+      <div class="has-text-centered">
+        <a target="_blank">
+          <p> SynLiDAR-to-POSS (ADA)</p>
+        </a>
+      </div>
+
+
+      <div class="multi_column">
+        <div>
+          <div class="hvr-grow modality">
+            <atarget="_blank">
+              <img src="static/images/syn2poss_al.png" alt="point cloud" id="modality_image" />
+              </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="hvr-grow modality">
+            <atarget="_blank">
+              <img src="static/images/syn2poss_asfda.png" alt="point cloud" id="modality_image" />
+              </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="hvr-grow modality">
+            <atarget="_blank">
+              <img src="static/images/syn2poss_ada.png" alt="point cloud" id="modality_image" />
+              </a>
+          </div>
+        </div>
+
+  </section>
+
+
+  <!-- Paper poster -->
+  <!--
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+-->
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      If you find our work useful, please cite our paper. BibTex code is provided below:
+      <pre><code>@inproceedings{xie2023annotator,
+        author = {Xie, Binhui and Li, Shuang and Guo, Qingju and Liu, Harold Chi and Cheng, Xinjing},
+        booktitle = {Advances in Neural Information Processing Systems},
+        title = {Annotator: An Generic Active Learning Baseline for LiDAR Semantic Segmentation},
+        year = {2023}
+       }
+}</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a>.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
