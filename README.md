@@ -2,7 +2,7 @@
 
 ### Annotator: A Generic Active Learning Baseline for LiDAR Semantic Segmentation
 
-- arXiv: [this link](https://arxiv.org/abs/)
+- arXiv: [this link]([https://arxiv.org/abs/](https://arxiv.org/pdf/2310.20293.pdf))
 
 - Project Page: [this link](https://binhuixie.github.io/annotator-web)
 
